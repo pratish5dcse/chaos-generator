@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chaos Generator</title>
+  <meta name="description" content="A tiny web app that generates delightfully unnecessary chaos." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <main class="app-shell">
+    <header class="hero">
+      <div class="badge">⚡ COMPLETELY UNNECESSARY TECHNOLOGY</div>
+      <h1>Chaos <span>Generator</span></h1>
+      <p>Press the button. Receive a mission, a mood, and a prediction you absolutely did not ask for.</p>
+    </header>
+
+    <section class="dashboard">
+      <article class="card mission-card" aria-live="polite">
+        <div class="card-top">
+          <span class="label">YOUR MISSION</span>
+          <span id="missionEmoji" class="big-emoji">🧃</span>
+        </div>
+        <h2 id="mission">Click the button to summon chaos.</h2>
+        <p id="missionHint">No productivity was harmed in the making of this application.</p>
+      </article>
+
+      <article class="card stat-card">
+        <div class="stat">
+          <span class="label">CHAOS LEVEL</span>
+          <strong id="chaosLevel">0%</strong>
+          <div class="meter"><div id="chaosMeter"></div></div>
+        </div>
+        <div class="stat-row">
+          <span>Luck</span>
+          <strong id="luck">???</strong>
+        </div>
+        <div class="stat-row">
+          <span>Vibes</span>
+          <strong id="vibes">Unstable</strong>
+        </div>
+      </article>
+
+      <article class="card prediction-card">
+        <div class="card-top">
+          <span class="label">TOTALLY LEGIT PREDICTION</span>
+          <span class="orb">◉</span>
+        </div>
+        <p id="prediction">The algorithm is warming up.</p>
+      </article>
+    </section>
+
+    <section class="controls">
+      <button id="chaosButton" class="chaos-button">
+        <span>GENERATE CHAOS</span>
+        <kbd>SPACE</kbd>
+      </button>
+      <button id="copyButton" class="secondary-button">Copy my fate</button>
+    </section>
+
+    <footer>
+      <span>Generated outcomes are 100% fictional.</span>
+      <span id="counter">Chaos events: 0</span>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
